@@ -51,23 +51,20 @@ struct Person {
 };
 
 int main() {
-    struct Person A ;
-    struct Person B ;
+    struct Person A, B;
 
-    //-------/define person A
-    printf("Person A\n");
-    printf("Name: ");
+    // กรอกข้อมูล Person A
+    printf("Person A\nName: ");
     scanf("%s", A.Name);
     printf("Age: ");
     scanf("%d", &A.Age);
     printf("Sex (M/F): ");
-    scanf(" %c", &A.Sex);  
+    scanf(" %c", &A.Sex);
     printf("Score: ");
     scanf("%f", &A.Score);
 
-    //-------/define person B
-    printf("\nPerson B\n");
-    printf("Name: ");
+    // กรอกข้อมูล Person B
+    printf("\nPerson B\nName: ");
     scanf("%s", B.Name);
     printf("Age: ");
     scanf("%d", &B.Age);
@@ -76,17 +73,16 @@ int main() {
     printf("Score: ");
     scanf("%f", &B.Score);
 
-    //-------/display person A
+    // แสดงข้อมูล
     printf("\n--| Person A Information |--\n");
-    printf("Name: %s (%c)\n", A.Name, (A.Sex == 'M' ? 'M' : 'F'));
-    printf("Age: %d years old\n", A.Age);
-    printf("Score: %.2f points\n", A.Score);
+    printf("Name : %s (%c)\n", A.Name, (A.Sex == 'M' ? 'M' : 'F'));
+    printf("Age : %d years old\n", A.Age);
+    printf("Score : %.2f points\n", A.Score);
 
-    //-------/display person B
     printf("\n--| Person B Information |--\n");
-    printf("Name: %s (%c)\n", B.Name, (B.Sex == 'M' ? 'M' : 'F'));
-    printf("Age: %d years old\n", B.Age);
-    printf("Score: %.2f points\n", B.Score);
+    printf("Name : %s (%c)\n", B.Name, (B.Sex == 'M' ? 'M' : 'F'));
+    printf("Age : %d years old\n", B.Age);
+    printf("Score : %.2f points\n", B.Score);
 
     return 0;
 }
