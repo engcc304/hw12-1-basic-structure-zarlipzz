@@ -42,47 +42,50 @@
 */
 
 #include <stdio.h>
+#include <string.h>
 
 struct Person {
-    char Name[20];
-    int Age;
-    char Sex;
-    float Score;
-};
+	    char  Name[20] ;
+	    int   Age ;
+	    char  Sex ;
+	    float Score ;
+	} ;
 
 int main() {
-    struct Person A, B;
+    
+    struct Person A , B ;
 
-    // กรอกข้อมูล Person A
-    printf("Person A\nName: ");
-    scanf("%s", A.Name);
-    printf("Age: ");
-    scanf("%d", &A.Age);
-    printf("Sex (M/F): ");
-    scanf(" %c", &A.Sex);
-    printf("Score: ");
-    scanf("%f", &A.Score);
+    printf( "Person A\n" ) ;
+    printf( "Name : \n" ) ;
+    scanf( "%s", A.Name ) ;
+    printf( "Age : \n" ) ;
+    scanf( "%d", &A.Age ) ;
+    printf( "Sex : \n" ) ;
+    scanf( " %c", &A.Sex ) ;
+    printf( "Score : \n" ) ;
+    scanf( "%f", &A.Score ) ;
 
-    // กรอกข้อมูล Person B
-    printf("\nPerson B\nName: ");
-    scanf("%s", B.Name);
-    printf("Age: ");
-    scanf("%d", &B.Age);
-    printf("Sex (M/F): ");
-    scanf(" %c", &B.Sex);
-    printf("Score: ");
-    scanf("%f", &B.Score);
 
-    // แสดงข้อมูล
-    printf("\n--| Person A Information |--\n");
-    printf("Name : %s (%c)\n", A.Name, (A.Sex == 'M' ? 'M' : 'F'));
-    printf("Age : %d years old\n", A.Age);
-    printf("Score : %.2f points\n", A.Score);
+    printf( "Person B\n" ) ;
+    printf( "Name : \n" ) ;
+    scanf( "%s", B.Name ) ;
+    printf( "Age : \n" ) ;
+    scanf( "%d", &B.Age ) ;
+    printf( "Sex : \n" ) ;
+    scanf( " %c", &B.Sex ) ;
+    printf( "Score : \n" ) ;
+    scanf( "%f", &B.Score ) ;
 
-    printf("\n--| Person B Information |--\n");
-    printf("Name : %s (%c)\n", B.Name, (B.Sex == 'M' ? 'M' : 'F'));
-    printf("Age : %d years old\n", B.Age);
-    printf("Score : %.2f points\n", B.Score);
 
-    return 0;
+    printf( "--| Person A Information |--\n" ) ;
+    printf( "Name : %s (%c)\n", A.Name, A.Sex) ;
+    printf( "Age : %d years old\n", A.Age ) ;
+    printf( "Score : %.2f points\n",  A.Score ) ;
+
+    printf( "--| Person B Information |--\n" ) ;
+    printf( "Name : %s (%c)\n", B.Name, B.Sex) ;
+    printf( "Age : %d years old\n", B.Age ) ;
+    printf( "Score : %.2f points\n", B.Score ) ;
+
+    return 0 ;
 }
